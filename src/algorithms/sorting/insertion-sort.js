@@ -2,26 +2,25 @@
  *插入排序-从小到大
  */
 function insertionSort(arr){
-	var l = arr.length, indexMin;
-	for(var i=0; i<l-1; i++){
-		indexMin = i;
-		for(var j=i+1; j<l; j++){
-			if(arr[indexMin] > arr[j]){
-				indexMin = j;
+	var l = arr.length;
+	for(var i=1; i<l; i++){
+		var temp = arr[i];
+		for(var j=i; j>0; j--){
+			if(arr[j-1] > temp){
+				arr[j] = arr[j-1];
+			}else{
+				break;
 			}
 		}
-		if(i !== indexMin){
-			var temp = arr[i];
-			arr[i] = arr[indexMin];
-			arr[indexMin] = temp;
-		}
+		arr[j] = temp;
 	}
 }
 /*
  *test
- *var a = [1,8,6,3,16,5,4,6,2];
- *selectionSort(a)
+ *var a = [13,1,8,6,3,16,5,4,6,2];
+ *insertionSort(a)
  */
+ 
 /*
- *时间复杂度T(n) = O((n-1)+(n-2)+...+1) = O(n*(n-1)/2) = O(n^2)
+ *时间复杂度T(n) = O(1+...+(n-1)) = O(n*(n-1)/2) = O(n^2)
  */
