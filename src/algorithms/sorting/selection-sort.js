@@ -16,6 +16,7 @@ function selectionSort(arr){
 			arr[indexMin] = temp;
 		}
 	}
+	return arr;
 }
 /*
  *test

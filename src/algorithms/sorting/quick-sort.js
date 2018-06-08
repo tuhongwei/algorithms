@@ -3,6 +3,7 @@
  */
 function quickSort(arr){
 	quick(arr, 0, arr.length - 1);
+	return arr;
 }
 
 function quick(arr, left, right){

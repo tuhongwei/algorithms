@@ -14,6 +14,7 @@ function insertionSort(arr){
 		}
 		arr[j] = temp;
 	}
+	return arr;
 }
 /*
  *test
