@@ -5,12 +5,8 @@ function insertionSort(arr){
 	var l = arr.length;
 	for(var i=1; i<l; i++){
 		var temp = arr[i];
-		for(var j=i; j>0; j--){
-			if(arr[j-1] > temp){
-				arr[j] = arr[j-1];
-			}else{
-				break;
-			}
+		for(var j=i; j>0 && arr[j-1] > temp; j--){
+			arr[j] = arr[j-1];
 		}
 		arr[j] = temp;
 	}
