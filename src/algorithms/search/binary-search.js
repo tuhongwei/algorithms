@@ -1,5 +1,5 @@
 /*
- *线性搜索-要求arr已排序 ->默认从小到大
+ *二分搜索-要求arr已排序 ->默认从小到大
  */
 function binarySearch(arr, item){
 	var l = arr.length, low = 0, high = l - 1;
