@@ -15,5 +15,5 @@ function bubbleSort(arr){
 	return arr;
 }
 /*
- *时间复杂度T(n) = O((n-1)*(n-2)) = O(n^2)
+ *时间复杂度T(n) = o((n-1)+(n-2)+...+1) = o(n*(n-1)/2) = o(n^2)
  */
